@@ -23,7 +23,6 @@ package expvar
 
 import (
 	"encoding/json"
-	"expvar"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -369,7 +368,7 @@ func GinHandler() gin.HandlerFunc {
 		c.Header("Content-Type", "application/json; charset=utf-8")
 		w.Write([]byte("{\n"))
 		first := true
-		expvar.Do(func(kv expvar.KeyValue) {
+		Do(func(kv KeyValue) {
 			if !first {
 				w.Write([]byte(",\n"))
 			}

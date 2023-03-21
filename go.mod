@@ -1,4 +1,4 @@
-module github/mostcute/expvar
+module github.com/mostcute/expvar
 
 go 1.18
 
